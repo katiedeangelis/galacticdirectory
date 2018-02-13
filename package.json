@@ -1,0 +1,26 @@
+{
+  "name": "galacticdirectory",
+  "version": "1.0.0",
+  "description": "A Galactic Directory of people in the Star Wars universe using the Star Wars API (https://swapi.co/). The application is based on Angular 1.x and uses the Materialize CSS framework.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiedeangelis/galacticdirectory.git"
+  },
+  "author": "Katie DeAngelis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katiedeangelis/galacticdirectory/issues"
+  },
+  "homepage": "https://github.com/katiedeangelis/galacticdirectory#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "parse": "^1.11.0",
+    "request": "^2.83.0"
+  }
+}
