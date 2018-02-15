@@ -14,14 +14,32 @@
 
 <body>
 
-    <div ng-app="myGalacticDirectory" ng-controller="myGalacticDirectoryController">
-        <h1>{{ banner }}</h1>
-        <ul>
-            <li ng-repeat="person in people">{{person.name}}</li>
-        </ul>
+    <div class="container" ng-app="myGalacticDirectory" ng-controller="myGalacticDirectoryController">
+        <div class="row">
+            <h1 class="col s12">{{ banner }}</h1>
+        </div>
+        <div class="row">
+            <h3 class="col s12">Click on a name to learn more!</h3>
+        </div>
+        <div class="row">
+            <h4 class="col s12">{{ resultsFound }}</h4>
+        </div>
+        <div class="row">
+            <h4 class="col s12">{{ pages }}</h4>
+        </div>
+        <div class="row">
+            <ul>
+                <li ng-repeat="person in people">{{person.name}}</li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="pagination">
+                <li ng-class="(($index+1)==selectedPage) ? 'active' : 'waves-effect'" ng-repeat="i in pageNumbers(pages) track by $index">
+                    <a ng-click="getPageNumber($index+1)">{{$index+1}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
-    <p>So far we have made an HTML list based on the items of an array.</p>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
